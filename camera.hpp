@@ -11,6 +11,7 @@ class Camera {
     glm::vec3 look_direction = glm::vec3(0.0, 0.0, 1.0);
     glm::vec3 up_direction = glm::vec3(0.0, 1.0, 0.0);
     void update_look_direction(double change_in_yaw_angle, double change_in_pitch_angle);
+    void set_look_direction(double new_yaw_angle, double new_pitch_angle);
     glm::vec3 input_snapshot_to_input_direction(bool forward_pressed, bool backward_pressed, bool right_pressed,
                                                 bool left_pressed);
 
