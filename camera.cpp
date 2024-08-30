@@ -17,10 +17,10 @@ void Camera::update_look_direction(double change_in_yaw_angle, double change_in_
 }
 
 void Camera::set_look_direction(double new_yaw_angle, double new_pitch_angle) {
-    this->clamp_camera_pitch_angle();
-
     this->look_direction = Camera::yaw_pitch_angles_to_vector(new_yaw_angle, new_pitch_angle);
     this->look_direction = glm::normalize(this->look_direction);
+
+    this->clamp_camera_pitch_angle();
 }
 
 /**
